@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "tsc",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -30,7 +30,17 @@
       "prettier"
     ],
     "rules": {
-      "endOfLine": "crlf",
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [
+            ".js",
+            ".jsx",
+            ".tsx",
+            ".ts"
+          ]
+        }
+      ],
       "prettier/prettier": "error",
       "spaced-comment": "off",
       "no-console": "warn",
@@ -83,6 +93,7 @@
     ]
   },
   "devDependencies": {
+    "@types/firebase": "^3.2.1",
     "eslint": "^8.2.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",
@@ -91,6 +102,8 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "prettier": "^2.6.2"
+    "prettier": "^2.6.2",
+    "typescript": "^4.7.2"
   }
 }
+
